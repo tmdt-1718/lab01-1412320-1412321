@@ -27,5 +27,15 @@ module Lab0114123201412321
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    ActionMailer::Base.smtp_settings = {
+      :address        => 'smtp.gmail.com',
+      :domain         => 'gmail.com',
+      :port           => 587,
+      :user_name      => ENV['GMAIL_USERNAME'],
+      :password       => ENV['GMAIL_PASSWORD'],
+      :authentication => :plain,
+      :enable_starttls_auto => true
+    }
   end
 end
