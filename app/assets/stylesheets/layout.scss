@@ -5,30 +5,27 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
     z-index: 0;
+    position: relative;
 }
 
-body::after { 
+body::after {
     /* The image used */
+    content: "";
     background-image: image-url("background.jpg");
-
     /* Full height */
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    content: "";
-
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
-    opacity: 0.25;
-    position:absolute;
-    z-index: -1;
+    background-attachment: fixed !important;
+    background-size: cover;
+    opacity: 0.4;
+    position: absolute;
+    z-index: -2;
 }
 
 p {
@@ -52,7 +49,7 @@ a:focus {
     background: #fff;
     border: none;
     border-radius: 0;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-btn {
@@ -76,6 +73,7 @@ span {
 #navbarToggler {
     color: #000;
 }
+
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -168,7 +166,7 @@ span {
     background: rgba(101, 54, 172, 0.7);
     text-decoration: none;
     margin-left: 10px;
-    margin-right: 10px; 
+    margin-right: 10px;
     border-radius: 0.3em;
 }
 
@@ -181,7 +179,7 @@ a[aria-expanded="true"] {
     color: #fff;
     background: rgba(103, 54, 172, 0.9);
     margin-left: 10px;
-    margin-right: 10px; 
+    margin-right: 10px;
     border-radius: 0.3em;
 }
 
@@ -206,9 +204,8 @@ a[aria-expanded="true"]::before {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: rgba(101, 54, 172, 0.5);
     margin-left: 10px;
-    margin-right: 10px; 
+    margin-right: 10px;
     border-radius: 0.1em;
 }
 
@@ -244,6 +241,21 @@ a.article:hover {
     padding: 10px;
     min-height: 200vh;
     transition: all 0.3s;
+}
+
+.container {
+    padding-top: 10px;
+}
+
+.google-map {
+    position: relative;
+    width: 100%;
+    z-index: 200;
+}
+
+#map {
+    height: 206px;
+    margin-bottom: 20px;    
 }
 
 
