@@ -1,2 +1,185 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<div class="my-container">
+  <section id="about-us" class="section about-us">
+    <div class="container">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="about-content left">
+              <h4>We're Creative</h4>
+              <p>Lorem adipipsum idolor sit iamet, iconsectetur aisicing elit. Necessitatibus illo vel dolorum soluta consectetur doloribus sit. Delectus non tenetur odit dicta vitae debitis suscipitaut voluptas quaerat consectetur.</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <figure class="about-content center">
+              <img class="img-fluid center-block" src=<%=image_url( "center_image.jpg")%>/>
+            </figure>
+          </div>
+          <div class="col-sm-4">
+            <div class="about-content right">
+              <h4>We're Friendly</h4>
+              <p>Lorem adipipsum dolor sit amet, consecteturno aisicing elit. Necessitatibus illo vel dolorumsa soluta consectetur doloribus sit. Delectus tenetur odit dicta vitae debitis susc ipitaut voluptas quaerat dolorum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="section team">
+    <div class="container">
+      <header class="section-heading">
+        <h2>Meet the Team</h2>
+        <span>Meet the Gears team</span>
+      </header>
+
+      <div class="section-content">
+        <div class="row">
+          <div class="col-sm-4 lborder">
+
+            <!-- team-member's-bio -->
+            <div class="team-bio">
+              <figure>
+                <img class="img-fluid center-block rounded-circle" src=<%=image_url( "team-1.jpg")%>>
+              </figure>
+              <div class="team-description">
+                <div class="member-name">Le Quoc Minh</div>
+                <div class="designation">Front-end Developer</div>
+              </div>
+
+              <!-- team-member's-social -->
+              <div class="team-social">
+                <ul class="social-block">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!--/team bio-->
+
+          </div>
+          <!-- col-sm-4 -->
+
+          <div class="col-sm-4 lborder rborder">
+          <div class="about-content center">
+            <figure>
+                <img id="gear" class="img-fluid center-block rounded-circle" src=<%=image_url( "gear1.png")%>>
+              </figure>
+              </div>
+          </div>
+          <!-- col-sm-4 -->
+
+          <div class="col-sm-4 rborder">
+
+            <!-- team-member's-bio -->
+            <div class="team-bio">
+              <figure>
+                <img class="img-fluid center-block rounded-circle" src=<%=image_url( "team-2.jpg")%>>
+              </figure>
+              <div class="team-description">
+                <div class="member-name">Luong Nhat Minh</div>
+                <div class="designation">Back-end Developer</div>
+              </div>
+
+              <!-- team-member's-social -->
+              <div class="team-social">
+                <ul class="social-block">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!--/team bio-->
+
+          </div>
+          <!-- col-sm-4 -->
+        </div>
+        <!-- row -->
+      </div>
+      <!-- section-content -->
+    </div>
+    <!-- container -->
+  </section>
+
+  <br>
+  <br>
+
+  <section id="contact" class="section contact">
+  <div class="container">
+      <div class="col-md-12 col-sm-6">
+        <h5>Find us on Google map</h5>
+        <div class="google-map">
+          <div id="map"></div>
+        </div>
+        <div class="row contact-info-wrap justify-content-center">
+          <div class="col-4">
+            <div>
+              <h5>Office Address</h5>
+              <address class="contact-info">
+                <span>227 Nguyen Van Cu St</span><br>
+                <span>District 5</span>,
+                <span>HCMC
+                </span><br>
+                <span>Vietnam</span>
+              </address>
+            </div>
+          </div>
+          <div class="col-4">
+            <div>
+              <h5>Contact Information</h5>
+              <div class="contact-info">
+                Minh Le: (+84) 169 242 2284<br>
+                Minh Luong: (+84) 126 595 0888<br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyssu17TI_His_j5Lbc5puGusujYDnIfs&callback=initMap" async defer></script>
