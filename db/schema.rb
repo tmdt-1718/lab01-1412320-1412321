@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20170929064926) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_images_on_user_id"
+ActiveRecord::Schema.define(version: 20170929141253) do
+
+  create_table "blogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text "content"
+    t.bigint "user_id"
+    t.integer "view_count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -44,4 +53,5 @@ ActiveRecord::Schema.define(version: 20170929064926) do
   end
 
   add_foreign_key "images", "users"
+  add_foreign_key "blogs", "users"
 end
