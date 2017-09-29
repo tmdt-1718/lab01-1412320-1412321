@@ -7,7 +7,4 @@ class UsersController < ApplicationController
 
   def blog
   end
-
-  def about
-  end
 end
