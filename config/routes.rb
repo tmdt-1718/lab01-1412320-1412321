@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/about'
+
   root 'users#home'
   get '/', to: 'users#home'
   
