@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170929064926) do
+ActiveRecord::Schema.define(version: 20170929141253) do
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "url"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20170929064926) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_images_on_user_id"
-ActiveRecord::Schema.define(version: 20170929141253) do
 
   create_table "blogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "content"
@@ -27,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170929141253) do
     t.integer "view_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
     t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
