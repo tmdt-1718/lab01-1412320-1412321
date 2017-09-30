@@ -6,34 +6,24 @@
   </div>
 
   <ul class="list-unstyled components">
-    <li>
+    <li id="sidebar_home">
       <a href="#">
         <i class="fa fa-home"></i>
         Home
       </a>
     </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-users"></i>
-        About
-      </a>
-      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+    <li id="sidebar_about">
+      <%= link_to about_path do %>
+        <i class="fa fa-users"></i> About
+      <% end %>
+    </li>
+    <li id="sidebar_album">
+      <a>
         <i class="fa fa-image"></i>
         Albums
       </a>
-      <ul class="collapse list-unstyled" id="pageSubmenu">
-        <li>
-          <a href="#">Page 1</a>
-        </li>
-        <li>
-          <a href="#">Page 2</a>
-        </li>
-        <li>
-          <a href="#">Page 3</a>
-        </li>
-      </ul>
     </li>
-    <li>
+    <li id="sidebar_blog">
       <a href="#">
         <i class="fa fa-file-text"></i>
         Blog

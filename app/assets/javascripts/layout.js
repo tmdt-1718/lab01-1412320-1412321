@@ -75,4 +75,5 @@ function initMap() {
         map: map,
         title: 'Snazzy!'
     });
+
 }
