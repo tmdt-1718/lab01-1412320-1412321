@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170930063100) do
+ActiveRecord::Schema.define(version: 20170930092200) do
 
   create_table "albums", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20170930063100) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "album_id"
+    t.index ["album_id"], name: "index_images_on_album_id"
     t.index ["user_id"], name: "index_images_on_user_id"
   end
 
@@ -65,5 +67,6 @@ ActiveRecord::Schema.define(version: 20170930063100) do
 
   add_foreign_key "albums", "users"
   add_foreign_key "blogs", "users"
+  add_foreign_key "images", "albums"
   add_foreign_key "images", "users"
 end

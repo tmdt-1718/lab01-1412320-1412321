@@ -7,6 +7,8 @@ class ImagesController < ApplicationController
 
   def show
     @image.views += 1
+    @image.album.total_views += 1
+    @image.album.save
     @image.save
     render json: {image: @image, user: @image.user }, status: 200
   end

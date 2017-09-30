@@ -7,8 +7,18 @@ $(document).on('show.bs.modal', function (event) {
 
 function takeImageInfo(id){
   $.get("/images/" + id).done(function(result){
-    console.log(result)
-    $("#modalUser").text(result.user.name)
-    $("#modalViews").text("Views: "+ result.image.views) 
+    $("#modalContent").html(
+    gravatar(result.user, 60) + 
+    '<h5><a href="/users/'+ result.user.id +'">'
+    + result.user.name + '</a></h5> '+
+    '<div>Views: '+ result.image.views +'</div>')
+    $("#modalViews").text() 
   })
+}
+
+function gravatar(user, size){
+  console.log(user.email.toLowerCase());
+  gravatar_id = $.md5(user.email.toLowerCase());
+  gravatar_link = "http://www.gravatar.com/avatar/" + gravatar_id + "?s=" + size;
+  return '<img src="' + gravatar_link + '" class="gravatar"/>';
 }

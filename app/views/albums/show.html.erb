@@ -1,0 +1,7 @@
+<div class="my-container">
+  <h3> <%= @album.name %> </h3>
+  <div class="row">
+    <%= render @images %>
+    <%= render '/images/modal' %>
+  </div>
+</div>
