@@ -1,0 +1,16 @@
+
+<div class="my-container">
+  <section id="blog" class="section blog">
+    <div class="container">
+
+      <div id="blogContent" class="section-content">
+        <div class="row">
+          <%= render @albums, locals: { user: @user } %>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  $("#sidebar_album").addClass("active");
+</script>

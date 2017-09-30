@@ -6,4 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 user = User.create([{ name: "Luong Nhat Minh", email: "minhluong96@gmail.com", password: "1234567", confirmed_at: DateTime.now, }])
-image = Image.create([{ url: "/uploads/cat.jpg", views: 10, user_id: 1 }, { url: "/uploads/minh.jpg", views: 10, user_id: 1 }])
+album = Album.create([ { name: "Timeline", total_views: 20, user_id: 1, cover_url: "/uploads/cat.jpg" },
+                       { name: "Mobile upload", total_views: 20, user_id: 1, cover_url: "/uploads/cat.jpg" } ])
+image = Image.create([ { url: "/uploads/cat.jpg", views: 10, user_id: 1 },
+                       { url: "/uploads/minh.jpg", views: 10, user_id: 1 } ])
