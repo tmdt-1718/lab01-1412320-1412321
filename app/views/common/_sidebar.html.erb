@@ -23,10 +23,10 @@
       <% end %>
     </li>
     <li id="sidebar_blog">
-      <a href="#">
+      <%= link_to user_blogs_path(current_user) do%>
         <i class="fa fa-file-text"></i>
         Blog
-      </a>
+      <% end %>
     </li>
     <li>
       <a href="#">
