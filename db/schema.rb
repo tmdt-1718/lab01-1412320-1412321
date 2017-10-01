@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170930092200) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
+    t.string "url"
     t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
