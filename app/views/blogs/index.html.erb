@@ -1,0 +1,14 @@
+<div class="my-container">
+  <section id="blog-grid" class="section blog blog-grid">
+    <div class="container">
+      <div id="blogContent" class="section-content">
+        <div class="row">
+          <%# <%= will_paginate %>
+          <% if @user.blogs.any? %>
+          <%=render 'blog'%>
+          <% end %>
+          <%# <%= will_paginate %>
+        </div>
+      </div>
+    </section>
+  </div>

@@ -34,6 +34,7 @@ gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'carrierwave',             '1.1.0'
 gem 'mini_magick',             '4.7.0'
+gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
 
 group :development, :test do

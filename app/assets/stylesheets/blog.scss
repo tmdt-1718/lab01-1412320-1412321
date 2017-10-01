@@ -1,7 +1,7 @@
 .blog {
   .blog-post {
     margin-bottom: 40px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
     header {
       position: relative;
       .date {
@@ -9,9 +9,10 @@
         position: absolute;
         padding: 10px;
         text-align: center;
-        font-weight: 500;
+        font-weight: 100;
         z-index: 9;
         color: #2c2c2c;
+        text-transform: uppercase;
       }
     }
     .blog-content {
@@ -65,14 +66,14 @@
     }
     footer {
       border: 1px solid #DDD;
-      padding: 0px 15px;
+      padding: 0 15px;
       .comment-count {
         color: #000;
         position: relative;
         padding-left: 25px;
       }
-      .comment-count:hover,
-      .comment-count:focus {
+      .comment-count:focus,
+      .comment-count:hover {
         color: #000;
       }
       .comment-count:before {
@@ -89,8 +90,8 @@
         padding-right: 0;
         text-transform: uppercase;
       }
-      .read-more:hover,
-      .read-more:focus {
+      .read-more:focus,
+      .read-more:hover {
         color: #000;
       }
       .read-more:before {
@@ -212,11 +213,11 @@
 }
 
 .pagination>.active>a,
-.pagination>.active>span,
-.pagination>.active>a:hover,
-.pagination>.active>span:hover,
 .pagination>.active>a:focus,
-.pagination>.active>span:focus {
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
   background-color: black;
   border-color: black;
 }
@@ -233,7 +234,7 @@
     &.popular-posts {
       .widget-content {
         ul {
-          padding: 15px 0 0 0;
+          padding: 15px 0 0;
           list-style: none;
           color: #b0b0b0;
           li {
