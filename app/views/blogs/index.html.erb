@@ -5,7 +5,7 @@
         <div class="row">
           <%# <%= will_paginate %>
           <% if @user.blogs.any? %>
-          <%=render 'blog'%>
+          <%=render @blogs %>
           <% end %>
           <%# <%= will_paginate %>
         </div>

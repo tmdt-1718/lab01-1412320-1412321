@@ -10,7 +10,13 @@ class BlogsController < ApplicationController
     end
 
     def show
-
+      @blog = Blog.find(params[:id])
+      if @blog.user == User.find(params[:user_id])
+        @blog.view_count += 1
+        @blog.save
+      else
+        redirect_to '/404'
+      end
     end
 
     # private
