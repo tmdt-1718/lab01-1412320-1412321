@@ -14,8 +14,14 @@ function takeImageInfo(id){
     gravatar(result.user, 60) + 
     '<h5><a href="/users/'+ result.user.id +'">'
     + result.user.name + '</a></h5> '+
-    '<div>Views: '+ result.image.views +'</div>')
-    $("#modalViews").text() 
+    '<div>Views: '+ result.image.views +'</div>' +
+    '<form method="post" id="album-cover" action="/users/' + result.user.id +
+    '/albums/' + result.image.album_id + '/cover">' +
+    '<input type="hidden" name="image_id" value="' + result.image.id +'">' +
+    '</form>' + '<a href="#" id="changeCover">Set album cover</a>' )
+    $("#changeCover").click(function(){
+      $("#album-cover").submit();
+    })
   })
 }
 
