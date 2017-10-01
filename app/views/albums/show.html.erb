@@ -3,4 +3,13 @@
   <div class="row">
     <%= render @images %>
   </div>
+  <%= form_for(@new_image, url: request.fullpath + "/images") do |f| %>
+    <span class="picture">
+      <%= f.file_field :url %>
+    </span>
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  <% end %>
 </div>
+<script>
+  $("#sidebar_album").addClass("active");
+</script>
