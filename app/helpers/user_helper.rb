@@ -5,5 +5,6 @@ module UserHelper
     gravatar_link = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
     image_tag(gravatar_link, alt: user.name, class: "gravatar")
   end
+  
 end
   
