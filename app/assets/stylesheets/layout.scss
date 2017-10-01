@@ -13,6 +13,7 @@ body {
 body:after {
   /* The image used */
   content: "";
+  filter: blur(3px);
   background-image: image-url("background.jpg");
   /* Full height */
   top: 0;

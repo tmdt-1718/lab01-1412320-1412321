@@ -1,14 +1,9 @@
-<div class="my-container">
+<div class="my-container" id="album-container">
   <h3> <%= @album.name %> </h3>
   <div class="row">
     <%= render @images %>
   </div>
-  <%= form_for(@new_image, url: request.fullpath + "/images") do |f| %>
-    <span class="picture">
-      <%= f.file_field :url %>
-    </span>
-    <%= f.submit "Save", class: "btn btn-primary" %>
-  <% end %>
+  <button class="btn btn-primary" data-toggle="modal" data-target="#uploader">Upload Image</button>
 </div>
 <script>
   $("#sidebar_album").addClass("active");
