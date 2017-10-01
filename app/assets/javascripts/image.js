@@ -1,8 +1,6 @@
 $(document).ready(function(){
   $("#modal").on('show.bs.modal', function (event) {
     var img = $(event.relatedTarget) //image that trigger modal
-    var imgDes = $("#modalImg")
-    imgDes.attr("src", img.attr("src"))
     takeImageInfo(img.data("id"))
   })
 })
@@ -10,6 +8,8 @@ $(document).ready(function(){
 
 function takeImageInfo(id){
   $.get("/images/" + id).done(function(result){
+    var imgDes = $("#modalImg")
+    imgDes.attr("src", result.image.url.url);
     $("#modalContent").html(
     gravatar(result.user, 60) + 
     '<h5><a href="/users/'+ result.user.id +'">'

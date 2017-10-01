@@ -1,6 +1,4 @@
-<div class="col-lg-3 col-md-4 col-sm-6">
-  <div class="img-container">
-    <%= image_tag image.url, class: "img-fluid", 
-    data:{ toggle: "modal", target: "#modal", id: "#{image.id}"} %>
-  </div>
+<div class="col-lg-3 col-md-4 col-sm-6 img-container">
+  <%= image_tag image.url.thumb, class: "img-fluid", 
+  data:{ toggle: "modal", target: "#modal", id: "#{image.id}"} %>
 </div>

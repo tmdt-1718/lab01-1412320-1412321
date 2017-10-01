@@ -8,9 +8,9 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(user_id: params[:user_id], album_id: params[:album_id], url: params[:image][:url])
     if @image.save
-      render json: @image, status:201
+      redirect_to user_album_path(params[:user_id], params[:album_id])
     else
-      render json: { errors: @image.errors }, status: 422
+      redirect_to user_album_path(params[:user_id], params[:album_id]), alert: @image.errors
     end
   end
 
