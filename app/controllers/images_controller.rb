@@ -5,6 +5,15 @@ class ImagesController < ApplicationController
     @images = Image.all
   end
 
+  def create
+    @image = Image.new(user_id: params[:user_id], album_id: params[:album_id], url: params[:image][:url])
+    if @image.save
+      render json: @image, status:201
+    else
+      render json: { errors: @image.errors }, status: 422
+    end
+  end
+
   def show
     @image.views += 1
     @image.album.total_views += 1

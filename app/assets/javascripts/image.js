@@ -1,9 +1,12 @@
-$(document).on('show.bs.modal', function (event) {
-    var img = $(event.relatedTarget) // Button that triggered the modal
+$(document).ready(function(){
+  $("#modal").on('show.bs.modal', function (event) {
+    var img = $(event.relatedTarget) //image that trigger modal
     var imgDes = $("#modalImg")
     imgDes.attr("src", img.attr("src"))
     takeImageInfo(img.data("id"))
+  })
 })
+
 
 function takeImageInfo(id){
   $.get("/images/" + id).done(function(result){
@@ -17,7 +20,6 @@ function takeImageInfo(id){
 }
 
 function gravatar(user, size){
-  console.log(user.email.toLowerCase());
   gravatar_id = $.md5(user.email.toLowerCase());
   gravatar_link = "http://www.gravatar.com/avatar/" + gravatar_id + "?s=" + size;
   return '<img src="' + gravatar_link + '" class="gravatar"/>';
