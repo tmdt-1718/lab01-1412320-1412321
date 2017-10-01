@@ -4,8 +4,10 @@
       <div id="blogContent" class="section-content">
         <div class="row">
           <%# <%= will_paginate %>
-          <% if @user.blogs.any? %>
-          <%=render @blogs %>
+          <% if @blogs.any? %>
+          <%= render @blogs %>
+        <% else %>
+          <h3>No blog yet</h3>
           <% end %>
           <%# <%= will_paginate %>
         </div>

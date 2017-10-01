@@ -4,8 +4,7 @@ class BlogsController < ApplicationController
     # before_action :correct_user,   only: [:show]
 
     def index
-        @user = User.find(params[:user_id])
-        @blogs = Blog.all
+        @blogs = Blog.where(user_id: params[:user_id])
         #@microposts = @user.microposts.paginate(page: params[:page])
     end
 
