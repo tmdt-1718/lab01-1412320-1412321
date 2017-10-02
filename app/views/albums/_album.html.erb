@@ -2,7 +2,11 @@
   <div class="blog-post">
     <header>
       <div class="blog-element">
-        <%= image_tag album.cover_url, alt: asset_url("gear1.png") ,class: "img-fluid" %>
+        <% if FileTest.exist?("#{Rails.root}/public/#{album.cover_url}") %>
+          <%= image_tag album.cover_url,class: "img-fluid" %>
+        <% else %>
+          <%= image_tag asset_url("thumb_1.jpg") ,class: "img-fluid" %>
+        <% end %>
       </div>
     </header>
     <div class="blog-content">

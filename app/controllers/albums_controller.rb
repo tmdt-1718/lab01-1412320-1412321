@@ -15,10 +15,13 @@ class AlbumsController < ApplicationController
   def cover
     @album = Album.find(params[:id])
     @image = Image.find(params[:image_id])
-    @album.cover_url = @image.url.thumb.url
-    if @album.save
-      redirect_to user_albums_url(@album.user_id)
-    else
+    if current_user == @image.user && @image.album == @album
+      @album.cover_url = @image.url.thumb.url
+      if @album.save
+        redirect_to user_albums_url(@album.user_id)
+      else
+        render json: @user.errors
+      end
     end
   end
 end

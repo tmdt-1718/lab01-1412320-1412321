@@ -38,6 +38,6 @@ blog = Blog.create([
     }
 ])
 
-album = Album.create([ { name: "Timeline", total_views: 0, user_id: 1, cover_url: "/uploads/cat.jpg" },
+album = Album.create([ { name: "Timeline", total_views: 0, user_id: 1},
 { name: "Mobile upload", total_views: 0, user_id: 1, cover_url: "/uploads/cat.jpg" } ])
 
