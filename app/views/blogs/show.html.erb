@@ -1,6 +1,9 @@
 <div class="my-container">
 <section id="blog-single" class="section blog-standard">
   <div class="container">
+  <% if current_user == @blog.user %>
+    <%= link_to 'Edit', edit_blog_path, class: "btn btn-primary" %>
+  <% end %>
     <div class="row">
       <div class="col-md-12 col-md-offset-2">
         <div class="row blog-post">

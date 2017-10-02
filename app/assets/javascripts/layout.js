@@ -1,3 +1,17 @@
+$(document).ready(function () {
+    (function(){
+        
+           if($("#map").length == 0 || !google) return;
+           
+
+           // When the window has finished loading create our google map below
+           //google.maps.event.addDomListener(window, 'load', init);
+           
+        
+           
+        })();
+});
+
 /*------------------------------------------
 Google Map
 ------------------------------------------*/
