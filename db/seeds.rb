@@ -25,7 +25,7 @@ blog = Blog.create([
         url: "/uploads/minh.jpg",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non posuere enim, a ultricies felis\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non posuere enim, a ultricies felis\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non posuere enim, a ultricies felis", 
         user_id: 2, 
-        view_count: 5, 
+        views: 5, 
         title: "Lorem Ipsum 1"
     },
 
@@ -33,7 +33,7 @@ blog = Blog.create([
         url: "/uploads/cat.jpg",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non posuere enim, a ultricies felis", 
         user_id: 2, 
-        view_count: 10, 
+        views: 10, 
         title: "Lorem Ipsum 2"
     }
 ])

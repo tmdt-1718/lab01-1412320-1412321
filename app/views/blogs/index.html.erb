@@ -1,7 +1,11 @@
 <div class="my-container">
+<h2 class="center my-section">All blogs</h2>
   <section id="blog-grid" class="section blog blog-grid">
     <div class="container">
       <div id="blogContent" class="section-content">
+        <%= link_to 'New blog', new_blog_path, class: "btn btn-primary" %>
+      <br>
+      <br>
         <div class="row">
           <%# <%= will_paginate %>
           <% if @blogs.any? %>
