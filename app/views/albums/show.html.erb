@@ -1,9 +1,13 @@
 <div class="my-container" id="album-container">
-  <h3> <%= @album.name %> </h3>
+  <h2 class="center my-section"> <%= @album.name %> </h2>
+  <p id="notice"><%= notice %></p>
+  <p id="alert"><%= alert %></p>
   <div class="row">
     <%= render @images %>
   </div>
+  <% if current_user == @album.user %>
   <button class="btn btn-primary" data-toggle="modal" data-target="#uploader">Upload Image</button>
+  <% end %>
 </div>
 <script>
   $("#sidebar_album").addClass("active");
