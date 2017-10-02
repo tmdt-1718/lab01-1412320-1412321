@@ -35,7 +35,7 @@ Yêu cầu **không bắt buộc**:
 * [ ] Cho phép người dùng đã đăng nhập comment cho bài viết. (**MSSV**)
 * [ ] Quản lý thêm thông tin tag cho mỗi bài viết. Mỗi bài viết có thể bao gồm nhiều tag và mỗi tag có thể có nhiều bài viết. (**MSSV**)
 * [ ] Cho phép người dùng đăng nhập bằng tài khoản facebook và lấy ảnh đại diện, email từ facebook. (**MSSV**)
-* [ ] Cho phép người dùng tạo album và đăng ảnh mới vào album. (**MSSV**)
+* [x] Cho phép người dùng tạo album và đăng ảnh mới vào album. (**1412321**)
 * [x] Chỉ cho phép người tạo album được phép thêm, xóa ảnh mình đã đăng vào album. (**1412321**)
 * [ ] Chỉ cho phép người tạo bài viết được phép chỉnh sửa bài viết mình đã đăng. (**MSSV**)
 * [ ] Cho phép người dùng layout bài viết bằng markdown. (**MSSV**)

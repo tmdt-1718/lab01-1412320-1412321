@@ -12,6 +12,28 @@ class AlbumsController < ApplicationController
     @images = @album.images
   end
 
+  def new
+    @album = Album.new
+    @image = Image.new
+  end
+
+  def create
+
+    @album = Album.new(name: params[:album][:name], user_id: current_user.id, total_views: 0)
+    if @album.save
+      @image = Image.new(user_id: current_user.id, album_id: @album.id, url: params[:album][:image][:url])
+      if @image.save
+        @album.cover_url = @image.url.thumb.url
+        @album.save
+        redirect_to user_albums_url(current_user), notice: "Album created successfully"
+      else
+        redirect_to new_album_path, alert: @image.errors
+      end
+    else
+      redirect_to new_album_path, alert: @album.errors
+    end
+  end
+
   def cover
     @album = Album.find(params[:id])
     @image = Image.find(params[:image_id])
