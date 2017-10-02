@@ -3,7 +3,9 @@
   <section id="blog-grid" class="section blog blog-grid">
     <div class="container">
       <div id="blogContent" class="section-content">
+        <% if current_user == @user %>
         <%= link_to 'New blog', new_blog_path, class: "btn btn-primary" %>
+        <% end %>
       <br>
       <br>
         <div class="row">
