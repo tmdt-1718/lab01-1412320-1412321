@@ -3,6 +3,9 @@ $(document).on('turbolinks:load', function(){
     var img = $(event.relatedTarget) //image that trigger modal
     takeImageInfo(img.data("id"))
   })
+  $("#blog-cover").change(function(){
+    readURL(this);
+});
 })
 
 
@@ -26,3 +29,18 @@ function gravatar(user, size){
   gravatar_link = "http://www.gravatar.com/avatar/" + gravatar_id + "?s=" + size;
   return '<img src="' + gravatar_link + '" class="gravatar"/>';
 }
+
+function readURL(input) {
+  
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+  
+          reader.onload = function (e) {
+              $('#preview').attr('src', e.target.result);
+          }
+  
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
+  
+  
