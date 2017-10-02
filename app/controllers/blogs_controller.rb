@@ -11,11 +11,24 @@ class BlogsController < ApplicationController
     def show
       @blog = Blog.find(params[:id])
       if @blog.user == User.find(params[:user_id])
-        @blog.view_count += 1
+        @blog.views += 1
         @blog.save
       else
         redirect_to '/404'
       end
+    end
+
+    def create
+      @blog = Blog.new(user_id: current_user.id, title: params[:blog][:title], content: params[:blog][:content], url: params[:blog][:url])
+      if @blog.save
+        redirect_to user_blogs_path(current_user.id)
+      else
+        redirect_to user_blogs_path(current_user.id), alert: @blog.errors
+      end
+    end
+
+    def new
+      @blog = Blog.new
     end
 
     # private

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    $('#myEditor').markdownEditor();
     $("#contactForm").submit(function (e) {
 
         e.preventDefault();

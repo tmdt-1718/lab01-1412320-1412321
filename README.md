@@ -23,11 +23,11 @@ Yêu cầu **bắt buộc**
 * [x] Khi nhấn vào trang albums sẽ thấy danh sách các album đã được lưu trữ trong hệ thống. Mỗi album bao gồm: ảnh cover, tên người tạo, tổng số view của các tấm ảnh trong album. (**1412321**)
 * [x] Khi nhấn vào từng album sẽ sẽ chuyển sang danh sách các tấm ảnh trong album. Mỗi tấm ảnh hiển thị các thông tin: người đăng, số lượng view và tấm ảnh dưới dạng thumbnail. (**1412321**)
 * [x] Vào trang about sẽ thấy thông tin nhóm: tên nhóm, danh sách thành viên (mã sinh viên, họ tên, ảnh đại diện) và bản đồ google map hiển thị địa chỉ liên lạc của nhóm. (**1412320**)
-* [ ] Vào trang blog sẽ thấy danh sách các bài viết, mỗi bài viết bao gồm: nội dung rút gọn, ảnh đại diện, người đăng và số view. (**MSSV**)
-* [ ] Nhấn vào mỗi bài viết sẽ thấy chi tiết bài viết cùng đầy đủ nội dung của bài viết. (**MSSV**)
+* [x] Vào trang blog sẽ thấy danh sách các bài viết, mỗi bài viết bao gồm: nội dung rút gọn, ảnh đại diện, người đăng và số view. (**1412320**)
+* [x] Nhấn vào mỗi bài viết sẽ thấy chi tiết bài viết cùng đầy đủ nội dung của bài viết. (**1412320**)
 * [x] Cho phép người dùng biết họ đang ở trang nào (sử dụng breadcrumb, highlight navigation bar,...). (**1412321**)
 * [x] Cho phép người dùng đăng nhập, đăng xuất, đăng ký thông tin tài khoản. (**1412321**)
-* [ ] Cho phép người dùng đã đăng nhập đăng thêm bài viết mới. (**MSSV**)
+* [x] Cho phép người dùng đã đăng nhập đăng thêm bài viết mới. (**1412320**)
 * [x] Sử dụng bcrypt hoặc devise để quản lý thông tin người dùng và băm mật khẩu. (**1412321**)
 
 Yêu cầu **không bắt buộc**:
@@ -36,15 +36,16 @@ Yêu cầu **không bắt buộc**:
 * [ ] Quản lý thêm thông tin tag cho mỗi bài viết. Mỗi bài viết có thể bao gồm nhiều tag và mỗi tag có thể có nhiều bài viết. (**MSSV**)
 * [ ] Cho phép người dùng đăng nhập bằng tài khoản facebook và lấy ảnh đại diện, email từ facebook. (**MSSV**)
 * [ ] Cho phép người dùng tạo album và đăng ảnh mới vào album. (**MSSV**)
-* [ ] Chỉ cho phép người tạo album được phép thêm, xóa ảnh mình đã đăng vào album. (**MSSV**)
+* [x] Chỉ cho phép người tạo album được phép thêm, xóa ảnh mình đã đăng vào album. (**1412321**)
 * [ ] Chỉ cho phép người tạo bài viết được phép chỉnh sửa bài viết mình đã đăng. (**MSSV**)
 * [ ] Cho phép người dùng layout bài viết bằng markdown. (**MSSV**)
 * [x] Gửi mail cho người dùng khi người dùng đã đăng ký thành công. (**1412321**)
 * [ ] Gửi mail cho tác giả khi có người dùng comment vào bài viết của họ. (**MSSV**)
 
 Liệt kê các **yêu cầu nâng cao** đã thực hiện:
-* [ ] Chức năng 1
-* [ ] Chức năng 2
+* [x] Đổi ảnh đại diện album. (**1412321**)
+* [x] Cắt ảnh cho phù hợp thumbnail. (**1412321**)
+* [x] Sử dụng Gravatar làm ảnh đại diện cho người dùng. (**1412320**)
 
 ## Demo
 

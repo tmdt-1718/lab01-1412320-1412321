@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171001064035) do
+ActiveRecord::Schema.define(version: 20171002064214) do
 
   create_table "albums", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20171001064035) do
   create_table "blogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "content"
     t.bigint "user_id"
-    t.integer "view_count"
+    t.integer "views", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
