@@ -3,7 +3,7 @@
     <header>
       <h4 class="date"><%= blog.created_at.day %><br><%=I18n.t("abbr_month_names")[ blog.created_at.month ]%></h4>
       <div class="blog-element">
-        <img class="img-fluid" src=<%=asset_url("1.jpg")%>>
+        <img class="img-fluid" src=<%= blog.url %>>
       </div>
     </header>
     <div class="blog-content">
