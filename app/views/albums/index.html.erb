@@ -12,7 +12,10 @@
         <% if current_user == @user %>
           <%= link_to 'New album', new_album_path, class: "btn btn-primary" %>
         <% end %>
-        </br></br>
+      <% end %>
+      <h2 class="center">Albums</h2>
+      <br>
+      <div id="blogContent" class="section-content">
         <div class="row">
           <%= render @albums, locals: { user: @user } %>
         </div>
