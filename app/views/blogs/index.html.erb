@@ -5,7 +5,9 @@
     <div class="container">
       <div id="blogContent" class="section-content">
         <% if current_user == @user %>
-        <%= link_to 'New blog', new_blog_path, class: "btn btn-primary" %>
+        <%= link_to new_blog_path, class: "btn btn-primary" do %>
+          <i class="fa fa-file-text-o"></i> New blog
+          <% end %>
         <% end %>
       <br>
       <br>

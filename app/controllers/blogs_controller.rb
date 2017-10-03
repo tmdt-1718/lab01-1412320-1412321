@@ -19,7 +19,7 @@ class BlogsController < ApplicationController
     def create
       @blog = Blog.new(user_id: current_user.id, title: params[:blog][:title], content: params[:blog][:content], url: params[:blog][:url])
       if @blog.save
-        redirect_to user_blogs_path(current_user.id)
+        redirect_to user_blogs_path(current_user.id), notice: 'Create new blog successfully'
       else
         redirect_to user_blogs_path(current_user.id), alert: @blog.errors
       end
@@ -50,6 +50,15 @@ class BlogsController < ApplicationController
         else
           redirect_to user_blogs_path(current_user.id), alert: @blog.errors
         end
+      end
+    end
+
+    def destroy
+      @blog = Blog.find(params[:id])
+      if @blog.destroy
+        redirect_to user_blogs_path(current_user.id), notice: 'Blog deleted'
+      else
+        redirect_to user_blogs_path(current_user.id), alert: @blog.errors
       end
     end
 end
