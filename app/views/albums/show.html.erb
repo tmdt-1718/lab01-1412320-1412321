@@ -1,13 +1,19 @@
 <div class="my-container" id="album-container">
+  <% if current_user == @album.user %>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#uploader">
+      <i class="fa fa-plus"></i> Upload
+    </button>
+    <%= link_to album_url(@album), method: :delete, class: "btn btn-danger",
+    data:{ confirm: "Are you sure to delete this album?" } do %>
+      <i class="fa fa-remove"></i> Delete Album
+    <% end %>
+  <% end %>
   <h2 class="center my-section"> <%= @album.name %> </h2>
   <p id="notice"><%= notice %></p>
   <p id="alert"><%= alert %></p>
   <div class="row">
     <%= render @images %>
   </div>
-  <% if current_user == @album.user %>
-  <button class="btn btn-primary" data-toggle="modal" data-target="#uploader">Upload Image</button>
-  <% end %>
 </div>
 <script>
   $("#sidebar_album").addClass("active");

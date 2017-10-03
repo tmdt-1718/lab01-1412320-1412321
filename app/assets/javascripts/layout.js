@@ -1,48 +1,3 @@
-$(document).ready(function () {
-    $('#myEditor').markdownEditor();
-    $("#contactForm").submit(function (e) {
-
-        e.preventDefault();
-
-        var postData = $(this).serializeArray(),
-            formURL = $(this).attr("action"),
-            $cfResponse = $('#contactFormResponse'),
-            $cfsubmit = $("#cfsubmit"),
-            cfsubmitText = $cfsubmit.text();
-
-        $cfsubmit.text("Sending...");
-
-
-        $.ajax({
-            url: formURL,
-            type: "POST",
-            data: postData,
-            success: function (data) {
-                $cfResponse.html(data);
-                $cfsubmit.text(cfsubmitText);
-            },
-            error: function (data) {
-                alert("Error occurd! Please try again");
-            }
-        });
-
-        return false;
-
-    });
-
-    (function(){
-        
-           if($("#map").length == 0 || !google) return;
-           
-
-           // When the window has finished loading create our google map below
-           //google.maps.event.addDomListener(window, 'load', init);
-           
-        
-           
-        })();
-});
-
 /*------------------------------------------
 Google Map
 ------------------------------------------*/
@@ -68,7 +23,6 @@ function initMap() {
     
     // Create the Google Map using our element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
-    console.log(mapElement);
     // Let's also add a marker while we're at it
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(10.763354,106.682388),

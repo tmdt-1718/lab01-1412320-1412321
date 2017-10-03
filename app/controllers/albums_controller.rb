@@ -1,6 +1,7 @@
 class AlbumsController < ApplicationController
   skip_before_action :verify_authenticity_token, :only => [:cover]
-
+  before_action :set_album, only: [:show, :destroy]
+  before_action :is_user, only: [:destroy]
   def index
     @user = User.find(params[:user_id])
     @albums = Album.where(user_id: params[:user_id])
@@ -8,7 +9,6 @@ class AlbumsController < ApplicationController
 
   def show
     @new_image = Image.new
-    @album = Album.find(params[:id])
     @images = @album.images
   end
 
@@ -18,7 +18,6 @@ class AlbumsController < ApplicationController
   end
 
   def create
-
     @album = Album.new(name: params[:album][:name], user_id: current_user.id, total_views: 0)
     if @album.save
       @image = Image.new(user_id: current_user.id, album_id: @album.id, url: params[:album][:image][:url])
@@ -34,6 +33,10 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def destroy
+    @album.destroy
+  end
+
   def cover
     @album = Album.find(params[:id])
     @image = Image.find(params[:image_id])
@@ -46,4 +49,15 @@ class AlbumsController < ApplicationController
       end
     end
   end
+
+  private
+    def set_album
+      @album = Album.find(params[:id])
+    end
+
+    def is_user
+      unless @album.user == current_user
+        redirect_to user_albums_url(@album.user, @album), alert: "You're not have permission to do this."
+      end
+    end
 end
