@@ -1,23 +1,47 @@
-.img-container{
-    padding-bottom: 10px;
-    padding-top: 10px;
+.img-container {
+  padding: 5px !important;
 }
 
 .modal {
-    text-align: center;
-  }
-  
-  @media screen and (min-width: 768px) { 
-    .modal:before {
-      display: inline-block;
-      vertical-align: middle;
-      content: " ";
-      height: 100%;
-    }
-  }
-  
-  .modal-dialog {
+  text-align: center;
+}
+
+.modal-image{
+  background-color: black;
+}
+
+#modalContent{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal:before {
     display: inline-block;
-    text-align: left;
     vertical-align: middle;
+    content: " ";
+    height: 100%;
   }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+body.modal-open #background{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+#album-container{
+  .row{
+    margin-left: 0px !important;
+    margin-right: 0px !important; 
+    margin-bottom: 10px;  
+  }
+}

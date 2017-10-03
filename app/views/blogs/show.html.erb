@@ -1,0 +1,33 @@
+<div class="my-container">
+<section id="blog-single" class="section blog-standard">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-md-offset-2">
+        <div class="row blog-post">
+          <div class="col-md-12">
+            <div class="featured-image center">
+              <img src=<%= @blog.url %> class="img-fluid"/>
+            </div>
+            <h2 class="post-title center">
+              <a><%= @blog.title %></a>
+            </h2>
+            <div class="post-meta center">
+              by 
+              <a ><%= @blog.user.name %></a>
+              <span>|</span>
+              <a><%= @blog.created_at.day %> <%=I18n.t("abbr_month_names")[ @blog.created_at.month ]%></a>
+              <span>|</span>
+              <%= @blog.views %> Views
+              <span>|</span>
+              3 Comments
+              </div>
+            <div class="post-content">
+              <%= @blog.content %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>

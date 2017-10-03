@@ -12,16 +12,18 @@
 
   <body>
     <div id="background">
-    <div class="contain">
-      <%= render 'common/header'%>
-      <div class="wrapper">
-        <%= render 'common/sidebar'%>
-        <div class="container">
-        <%= yield %>
+      <div class="contain">
+        <%= render 'common/header'%>
+        <div class="wrapper">
+          <%= render 'common/sidebar'%>
+          <div class="container">
+          <%= yield %>
+          </div>
         </div>
       </div>
     </div>
-    </div>
+    <%= render '/images/modal' %>
+    <%= render '/images/uploader' %>
   </body>
 
   <script type="text/javascript">

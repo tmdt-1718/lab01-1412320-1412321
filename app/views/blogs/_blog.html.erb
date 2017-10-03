@@ -1,0 +1,27 @@
+<div class="col-sm-6 col-md-6">
+  <div class="blog-post">
+    <header>
+      <h4 class="date"><%= blog.created_at.day %><br><%=I18n.t("abbr_month_names")[ blog.created_at.month ]%></h4>
+      <div class="blog-element">
+        <img class="img-fluid" src=<%= blog.url %>>
+      </div>
+    </header>
+    <div class="blog-content">
+      <h4>
+        <%= link_to blog.title, user_blog_path(blog.user_id, blog.id) %>
+      </h4>
+      <div class="post-meta">
+        <span>By
+          <a href="#"><%= blog.user.name %></a>
+        </span>
+        <span>
+          <a href="#">30 Comments</a>
+        </span>
+        <span>
+          <a href="#"><%= blog.views %> views</a>
+        </span>
+      </div>
+      <p><%= blog_preview(blog.content) %></p>
+    </div>
+  </div>
+</div>
