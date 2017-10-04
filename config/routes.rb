@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   resources :images, only: [ :show, :index, :destroy ]
   resources :albums, only: [ :new, :create, :destroy ]
   resources :users, only: [ :member ] do
-    resources :blogs, only: [ :index, :show ]
+    resources :blogs, only: [ :index, :show ] do
+      resources :comments, only: [:create]
+    end
     resources :albums, only: [ :index, :show, :member, :cover ] do
       member do
         post 'cover'
