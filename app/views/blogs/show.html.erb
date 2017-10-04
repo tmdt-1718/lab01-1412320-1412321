@@ -1,6 +1,14 @@
 <div class="my-container">
 <section id="blog-single" class="section blog-standard">
   <div class="container">
+  <% if current_user == @blog.user %>
+    <%= link_to edit_blog_path, class: "btn btn-primary" do %>
+      <i class="fa fa-edit"></i> Edit
+    <% end %>
+    <%= link_to blog_path, data: { confirm: "Are you sure?" }, class: "btn btn-danger", method: :delete do %>
+      <i class="fa fa-remove"></i> Delete
+    <% end %>  
+  <% end %>
     <div class="row">
       <div class="col-md-12 col-md-offset-2">
         <div class="row blog-post">

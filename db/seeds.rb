@@ -22,7 +22,6 @@ user = User.create([
 
 blog = Blog.create([
     {
-        url: "/uploads/minh.jpg",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non posuere enim, a ultricies felis\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non posuere enim, a ultricies felis\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non posuere enim, a ultricies felis", 
         user_id: 2, 
         views: 5, 
@@ -30,7 +29,6 @@ blog = Blog.create([
     },
 
     {
-        url: "/uploads/cat.jpg",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non posuere enim, a ultricies felis", 
         user_id: 2, 
         views: 10, 

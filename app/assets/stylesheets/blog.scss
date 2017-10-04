@@ -297,3 +297,9 @@
 #disqus_thread {
   margin-top: 40px;
 }
+
+.new_blog, .edit_blog {
+  textarea {
+    height: 300px;
+  }
+}

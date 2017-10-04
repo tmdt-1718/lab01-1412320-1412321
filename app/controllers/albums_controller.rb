@@ -35,6 +35,7 @@ class AlbumsController < ApplicationController
 
   def destroy
     @album.destroy
+    redirect_to user_albums_url(current_user)
   end
 
   def cover

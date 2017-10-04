@@ -3,7 +3,11 @@
     <header>
       <h4 class="date"><%= blog.created_at.day %><br><%=I18n.t("abbr_month_names")[ blog.created_at.month ]%></h4>
       <div class="blog-element">
-        <img class="img-fluid" src=<%= blog.url %>>
+      <% if blog.url.url && FileTest.exist?("#{Rails.root}/public/#{blog.url}") %>
+          <%= image_tag blog.url,class: "img-fluid" %>
+        <% else %>
+          <%= image_tag asset_url("1.jpg"), class: "img-fluid" %>
+        <% end %>
       </div>
     </header>
     <div class="blog-content">

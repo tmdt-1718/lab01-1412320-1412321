@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   root 'users#home'
 
   get '/about', to: 'static_pages#about'
-  resources :blogs, only: [ :new, :create ]
+  resources :blogs, only: [ :new, :create, :edit, :update, :destroy ]
 
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
   resources :images, only: [ :show, :index, :destroy ]
   resources :albums, only: [ :new, :create, :destroy ]
   resources :users, only: [ :member ] do
