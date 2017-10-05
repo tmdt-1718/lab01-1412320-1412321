@@ -1,0 +1,46 @@
+<div class="my-container">
+  <div class="center">
+    <%= gravatar_for(@user, size: 150)%>
+  <br><br>
+  <h2><%= @user.name %></h2>
+  <p>Email: <%= @user.email %></p>
+  </div>
+  <br>
+  <div class="container">
+    <ul class="list-group">
+    <div class="row">
+      <div class="col-6">
+        <li class="list-group-item">
+          <%= link_to user_blogs_path(@user.id) do %>
+            <h3>Blog: <%= @blog.count %></h3>
+          <% end %>
+          <% @blog.each do |blog| %>
+            <ol>
+              <%= link_to user_blog_path(@user.id, blog.id) do %>
+                <%= blog.created_at.to_date %> | <%= blog.title %>
+              <% end %>
+            </ol>
+          <% end %>
+        </li>
+      </div>
+      <div class="col-6">
+        <li class="list-group-item">
+          <%= link_to user_albums_path(@user.id) do %>
+            <h3>Album: <%= @album.count %></h3>
+          <% end %>
+          <% @album.each do |album| %>
+            <ol>
+              <%= link_to user_album_path(@user.id, album.id) do %>
+                <%= album.created_at.to_date %> | <%= album.name %>
+              <% end %>
+            </ol>
+          <% end %>
+        </li>
+    </div>
+    </ul>
+  </div>
+</div>
+</div>
+<script>
+  $("#sidebar_home").addClass("active");
+</script>

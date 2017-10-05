@@ -7,6 +7,10 @@ class AlbumsController < ApplicationController
     @albums = Album.where(user_id: params[:user_id])
   end
 
+  def all
+    @albums = Album.all
+  end
+
   def show
     @new_image = Image.new
     @images = @album.images

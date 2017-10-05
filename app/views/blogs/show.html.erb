@@ -7,7 +7,7 @@
     <% end %>
     <%= link_to blog_path, data: { confirm: "Are you sure?" }, class: "btn btn-danger", method: :delete do %>
       <i class="fa fa-remove"></i> Delete
-    <% end %>  
+    <% end %>
   <% end %>
     <div class="row">
       <div class="col-md-12 col-md-offset-2">
@@ -20,7 +20,7 @@
               <a><%= @blog.title %></a>
             </h2>
             <div class="post-meta center">
-              by 
+              by
               <a ><%= @blog.user.name %></a>
               <span>|</span>
               <a><%= @blog.created_at.day %> <%=I18n.t("abbr_month_names")[ @blog.created_at.month ]%></a>
@@ -47,3 +47,6 @@
   </div>
 </section>
 </div>
+<script>
+  $("#sidebar_blog").addClass("active");
+</script>

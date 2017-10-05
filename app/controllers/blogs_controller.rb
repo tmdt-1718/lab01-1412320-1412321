@@ -6,6 +6,10 @@ class BlogsController < ApplicationController
       @blogs = Blog.where(user_id: params[:user_id])
     end
 
+    def all
+      @blogs = Blog.all
+    end
+
     def show
       @blog = Blog.find(params[:id])
       if @blog.user == User.find(params[:user_id])

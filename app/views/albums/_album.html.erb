@@ -12,7 +12,7 @@
     <div class="blog-content">
       <h4><%= link_to album.name, user_album_path(album.user_id, album.id) %> </h4>
       <div class="post-meta">
-        <span>By <%= link_to @user.name, "#" %></span>
+        <span>By <%= link_to album.user.name, user_home_path(album.user) %></span>
         <span><%= album.total_views %> views</span>
       </div>
     </div>

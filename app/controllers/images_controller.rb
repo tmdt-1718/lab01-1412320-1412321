@@ -2,7 +2,7 @@ class ImagesController < ApplicationController
   before_action :set_image, only: [:show]
   include UserHelper
   include ActionView::Helpers::AssetTagHelper
-  
+
   def index
     @images = Image.all
   end
@@ -52,8 +52,8 @@ class ImagesController < ApplicationController
     end
 
     def image_info_html
-      result = gravatar_for(@image.user, size: 60) + 
-               "<h5><a href='/users/#{@image.user.id}'>" +
+      result = gravatar_for(@image.user, size: 60) +
+               "<h5><a href='/users/#{@image.user.id}/home'>" +
                "#{@image.user.name}</a></h5><div>Views: #{@image.views}</div>"
       if current_user == @image.user
         result += "<form method='post' id='album-cover' " +
