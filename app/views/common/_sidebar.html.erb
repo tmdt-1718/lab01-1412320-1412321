@@ -6,10 +6,9 @@
   </div>
   <ul class="list-unstyled components">
     <li id="sidebar_home">
-      <a href="#">
-        <i class="fa fa-home"></i>
-        Home
-      </a>
+      <%= link_to user_home_path(current_user) do %>
+        <i class="fa fa-home"></i> Home
+      <% end %>
     </li>
     <li id="sidebar_about">
       <%= link_to about_path do %>
@@ -17,15 +16,15 @@
       <% end %>
     </li>
     <li id="sidebar_album">
-      <%= link_to user_albums_path(current_user) do%>
+      <%= link_to albums_path do%>
         <i class="fa fa-image"></i>
         Albums
       <% end %>
     </li>
     <li id="sidebar_blog">
-      <%= link_to user_blogs_path(current_user) do%>
+      <%= link_to blogs_path do%>
         <i class="fa fa-file-text"></i>
-        Blog
+        Blogs
       <% end %>
     </li>
     <li>
