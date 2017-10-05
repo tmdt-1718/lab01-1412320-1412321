@@ -9,7 +9,7 @@
   <div class="container">
     <ul class="list-group">
     <div class="row">
-      <div class="col-6">
+      <div class="col-md-6 col-sm-12">
         <li class="list-group-item">
           <%= link_to user_blogs_path(@user.id) do %>
             <h3>Blog: <%= @blog.count %></h3>
@@ -23,7 +23,7 @@
           <% end %>
         </li>
       </div>
-      <div class="col-6">
+      <div class="col-md-6 col-sm-12">
         <li class="list-group-item">
           <%= link_to user_albums_path(@user.id) do %>
             <h3>Album: <%= @album.count %></h3>
