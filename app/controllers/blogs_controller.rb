@@ -11,6 +11,7 @@ class BlogsController < ApplicationController
       if @blog.user == User.find(params[:user_id])
         @blog.views += 1
         @blog.save
+        @comment = Comment.new
       else
         redirect_to '/404'
       end

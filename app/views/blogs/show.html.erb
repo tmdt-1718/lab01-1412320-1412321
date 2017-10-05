@@ -27,10 +27,18 @@
               <span>|</span>
               <%= @blog.views %> Views
               <span>|</span>
-              3 Comments
+              <%= @blog.comments.length %> Comments
               </div>
             <div class="post-content">
               <%= @blog.content %>
+            </div>
+            <br>
+            <div class="footer">
+              <%= render 'comments/new' %>
+              <div>
+                <p><strong>Comments (<%= @blog.comments.length %>)</strong></p>
+                <%= render @blog.comments %>
+              </div>
             </div>
           </div>
         </div>

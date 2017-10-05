@@ -4,4 +4,5 @@ class Blog < ApplicationRecord
   validates :title, presence: true
   validates :content, presence: true
   mount_uploader :url, BlogCoverUploader
+  has_many :comments, dependent: :destroy
 end
