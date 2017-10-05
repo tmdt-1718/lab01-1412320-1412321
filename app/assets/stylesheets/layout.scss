@@ -375,7 +375,7 @@ a.article:hover {
     margin-left: 0;
   }
   #sidebarCollapse span {
-    display: none;
+    display: block;
   }
 }
 
@@ -403,4 +403,9 @@ a.article:hover {
 
 #notice{
   color: green;
+}
+
+#sidebarCollapse{
+  margin-right: 10px;
+  display: block;
 }

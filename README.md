@@ -4,7 +4,7 @@
 
 Thành viên:
 * [x] **1412320** Lê Quốc Minh (1412320)
-* [X] **1412321** Lương Nhật Minh (1412321)
+* [x] **1412321** Lương Nhật Minh (1412321)
 
 URL: **https://m2blog.herokuapp.com**
 
