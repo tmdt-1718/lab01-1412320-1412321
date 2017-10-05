@@ -7,4 +7,10 @@ class User < ApplicationRecord
   has_many :albums, dependent: :destroy
   has_many :blogs, dependent: :destroy
   has_many :comments, dependent: :destroy
+  before_create :take_name
+
+  private
+    def take_name
+      self.name = self.email.split("@")[0]
+    end
 end

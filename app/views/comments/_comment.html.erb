@@ -1,6 +1,8 @@
+<hr>
 <div>
   <%= gravatar_for(comment.user, size: 40)%>
   <strong> <%= comment.user.name %> </strong>
+  <span> - <%= time_ago_in_words comment.created_at %> ago</span>
 </div>
 <div>
   <p> <%= comment.content %> </p>
