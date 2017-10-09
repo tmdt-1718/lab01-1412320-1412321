@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
   resources :blogs, only: [ :new, :create, :edit, :update, :destroy ]
     get 'blogs', to: 'blogs#all'
-  devise_for :users
+  devise_for :users, controllers: { 
+    sessions: 'users/sessions'
+  }
 
   resources :images, only: [ :show, :index, :destroy ]
   resources :albums, only: [ :new, :create, :destroy ]
