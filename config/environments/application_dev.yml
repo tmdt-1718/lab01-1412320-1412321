@@ -1,5 +1,5 @@
 HOST: 'localhost'
 PORT: '3000'
 HOST_URL: 'localhost:3000'
-GMAIL_USERNAME: '******'
-GMAIL_PASSWORD: '******'
+GMAIL_USERNAME: 'fashionclubdev@gmail.com'
+GMAIL_PASSWORD: 'minh1996'

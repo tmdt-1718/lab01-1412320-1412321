@@ -1,0 +1,7 @@
+<h1>M2BLOG</h1>
+
+<p><%= @comment.user.name %> comment on your blog</p>
+<hr>
+  <p><%= @comment.content %></p>
+<hr>
+<%= link_to "Click here to see what's new", user_blog_url(@user, @comment.blog) %>
