@@ -23,3 +23,4 @@
 
 /public/uploads/*
 !/public/uploads/.gitkeep
+config/environments/application_dev.yml

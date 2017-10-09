@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :blogs, only: [ :new, :create, :edit, :update, :destroy ]
     get 'blogs', to: 'blogs#all'
   devise_for :users, controllers: { 
-    sessions: 'users/sessions'
+    sessions: 'users/sessions',
+    omniauth_callbacks: 'auth/callbacks'
   }
 
   resources :images, only: [ :show, :index, :destroy ]
