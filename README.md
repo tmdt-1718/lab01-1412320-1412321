@@ -45,7 +45,7 @@ Yêu cầu **không bắt buộc**:
 Liệt kê các **yêu cầu nâng cao** đã thực hiện:
 * [x] Đổi ảnh đại diện album. (**1412321**)
 * [x] Cắt ảnh cho phù hợp thumbnail. (**1412321**)
-* [x] Sử dụng Gravatar làm ảnh đại diện cho người dùng. (**1412320**)
+* [x] Sử dụng Gravatar làm ảnh đại diện cho người dùng khi không có ảnh đại diện từ Facebook. (**1412320**)
 
 ## Demo
 
