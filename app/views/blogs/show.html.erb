@@ -29,8 +29,8 @@
               <span>|</span>
               <%= @blog.comments.length %> Comments
               </div>
-            <div class="post-content">
-              <%= @blog.content %>
+            <div class="post-content" id="my-blog-content">
+              <%= simple_format @blog.content %>
             </div>
             <br>
             <div class="footer">
