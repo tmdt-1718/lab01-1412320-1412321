@@ -22,7 +22,10 @@
       <%= f.submit "Log in", class: "btn btn-outline-primary" %>
     </div>
   <% end %>
-  
+  <%= link_to user_facebook_omniauth_authorize_url(),
+      class: "btn btn-lg btn-fb" do %>
+    <i class="fa fa-facebook-square"></i> Connect with Facebook
+  <% end %>
   </br>
   <%= render "devise/shared/links" %>
 </div>

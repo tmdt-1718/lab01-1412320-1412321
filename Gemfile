@@ -37,6 +37,8 @@ gem 'carrierwave',             '1.1.0'
 gem 'mini_magick',             '4.7.0'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
+gem 'omniauth-facebook'
+gem 'koala'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
