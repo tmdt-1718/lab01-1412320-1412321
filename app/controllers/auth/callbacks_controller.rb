@@ -3,7 +3,6 @@ class Auth::CallbacksController < ApplicationController
   def facebook
     user = User.create_from_omniauth(omniauth_params)
     if user
-      p user
       sign_in(:user, user)
       redirect_to :root
     else

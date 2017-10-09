@@ -389,9 +389,6 @@ a.article:hover {
 
 .center {
   text-align: center;
-  .gravatar {
-    float: none;
-  }
 }
 
 .my-section {
@@ -411,6 +408,15 @@ a.article:hover {
 }
 
 .btn-fb {
-  color: white;
-  background-color: rgb(59, 89, 152);
+  color: rgb(59, 89, 152);
+  background-color: transparent;
+  border-color: rgb(59, 89, 152) !important;
+  border-radius: 1.5em !important;
+  margin-top: 5px; 
+  margin-bottom: 5px; 
+  height: 38;
+  &:hover{
+    color: white;
+    background-color: rgb(59, 89, 152);
+  }
 }

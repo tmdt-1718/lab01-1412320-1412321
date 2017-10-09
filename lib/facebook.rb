@@ -7,6 +7,5 @@ class Facebook
     def get_object(token, id, args = {}, options = {}, &block)
       fbgraph(token).get_object(id, args, options, &block)
     end
-
   end
 end

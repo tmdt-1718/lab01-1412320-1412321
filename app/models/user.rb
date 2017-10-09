@@ -10,18 +10,19 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   before_create :take_name
 
-  def self.create_from_omniauth(params)
-    user = find_or_create_by(email: params.info.email)
-    me = Facebook.get_object(params.credentials.token, "me")
-    user.update({
-      uid: params.info.uid,
-      token: params.credentials.token,
-      name: params.info.name,
-      avatar: params.info.image,
-      confirmed_at: DateTime.now
-    })
-    user
+  def self.create_from_omniauth(auth)
+    where(email: auth.info.email).first_or_initialize.tap do |user|
+      user.email = auth.info.email
+      user.token = auth.credentials.token
+      user.avatar = auth.info.image + "?type=large"
+      user.uid = auth.info.uid
+      user.confirmed_at = DateTime.now
+      user.save
+      user.name = auth.info.name
+      user.save
+    end
   end
+
 
   private
     def take_name

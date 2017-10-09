@@ -2,7 +2,7 @@ module UserHelper
   #Return user's Gravatar
   def gravatar_for(user, size: 80)
     if user.avatar
-      image_tag(user.avatar, class:"gravatar")
+      image_tag(user.avatar, class:"gravatar img-fluid", style:"width: #{size}px")
     else
       gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
       gravatar_link = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
