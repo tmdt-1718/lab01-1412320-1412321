@@ -3,7 +3,7 @@
 <%= form_for @comment, url: request.fullpath + "/comments", method: :post do |f| %>
   <div class="row">
     <div class="col-md-6 col-sm-12 form-group">
-      <%= f.text_field :content, class: "form-control" %>
+      <%= f.text_field :content, class: "form-control", id: "my-comment" %>
     </div>
   </div>
   <div class="form-group">

@@ -39,7 +39,7 @@ Yêu cầu **không bắt buộc**:
 * [x] Chỉ cho phép người tạo album được phép thêm, xóa ảnh mình đã đăng vào album. (**1412321**)
 * [x] Chỉ cho phép người tạo bài viết được phép chỉnh sửa bài viết mình đã đăng. (**1412320**)
 * [ ] Cho phép người dùng layout bài viết bằng markdown. (**MSSV**)
-* [x] Gửi mail cho người dùng khi người dùng đã đăng ký thành công. (**1412321**)
+* [x] Gửi mail cho người dùng khi người dùng đã đăng nhập thành công. (**1412321**)
 * [ ] Gửi mail cho tác giả khi có người dùng comment vào bài viết của họ. (**MSSV**)
 
 Liệt kê các **yêu cầu nâng cao** đã thực hiện:
